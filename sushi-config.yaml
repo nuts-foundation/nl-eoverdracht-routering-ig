@@ -3,11 +3,11 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.nl.clientbeeld360
-canonical: https://nuts-foundation.github.io/nl-360-ig
-url: https://nuts-foundation.github.io/nl-360-ig/ImplementationGuide/fhir.nl.clientbeeld360
-name: Clientbeeld360IG
-title: Netherlands - Clientbeeld 360 Implementation Guide
+id: fhir.nl.eoverdracht.routering
+canonical: https://nuts-foundation.github.io/nl-eoverdracht-routering-ig
+url: https://nuts-foundation.github.io/nl-eoverdracht-routering-ig/ImplementationGuide/fhir.nl.eoverdracht.routering
+name: EOverdrachtRouteringIG
+title: Netherlands - eOverdracht Routering Implementation Guide
 language: en-US
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown

@@ -1,9 +1,9 @@
-// Example Patient for Clientbeeld 360 IG
+// Example Patient for eOverdracht Routering IG
 Instance: PatientExample
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 Title: "Patient Example - Maria van den Berg"
-Description: "Example patient with BSN identifier for Clientbeeld 360 scenarios"
+Description: "Example patient with BSN identifier for eOverdracht Routering scenarios"
 
 * identifier[bsn].use = #official
 * identifier[bsn].system = "http://fhir.nl/fhir/NamingSystem/bsn"
