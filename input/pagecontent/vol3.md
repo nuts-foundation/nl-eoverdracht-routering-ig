@@ -23,6 +23,19 @@ Teams, healthcare services and specialties have to be modeled as [HealthcareServ
 
 Regarding the generic function Addressing no other resources than Organization, Location and HealthcareService are in scope.
 
+#### Example FHIR queries
+
+Some example FHIR queries that can be used:
+
+| Description | Query | Common use |
+|-------------|-------|------------|
+| Find an Organization by did:nuts-identifier | /Organization?identifier=urn:ietf:rfc:3986|{did:nuts-identifier including did:nuts-prefix} | Part of nursing handoff flow at Sending Organization |
+| Find all Locations of an organization | /Location?organization=Organization/{organization-resource-id} | Part of nursing handoff flow at Sending Organization |
+| Find all HealthcareServices of an organization | /HealthcareService?organization=Organization/{organization-resource-id} | Part of nursing handoff flow at Sending Organization |
+| Find all HealthcareServices of a specific type within an organization | /HealthcareService?organization=Organization/{organization-resource-id}&service-type=http://istandaarden.nl/ibieb/codelijsten/COD163|{code} |
+| Lookup Location | /Location?identifier=urn:ietf:rfc:3986|{custodianAssignedIdentifier found in fetched Task} | Receiving Organization looks up the Location using the identifier that is mentioned in Task.location |
+| Lookup HealthcareService | /HealthcareService?identifier=urn:ietf:rfc:3986|{custodianAssignedIdentifier found in fetched Task} | Receiving Organization looks up the HealthcareService using the identifier that is mentioned in Task.location |
+
 ### Routing
 
 #### Task
