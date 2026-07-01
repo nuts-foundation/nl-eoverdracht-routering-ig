@@ -8,8 +8,9 @@ Deze implementatiegids voegt routering toe aan eOverdracht. Een functionele besc
 Routering betekent in de context van eOverdracht dat wanneer gewenst de versturende zorgorganisatie een cliënt/patiënt overdraaft naar een specifiek onderdeel van de ontvangende zorgorganisatie. Dit kan een specifieke locatie, afdeling, team of zorgdienst van de ontvangende zorgorganisatie zijn.
 
 Voorbeelden:
-- Een patient wordt overgedragen van het ziekenhuis naar de afdeinng geriatrische revalidatiezorg van een vvt-organisatie.
-- Een patient wordt overgedragen van een intramurale vvt-organisatie naar een specifiek wijkzorgteam van een landelijke wijkzorgorganisatie.
+- Een cliënt/patiënt wordt overgedragen van het ziekenhuis naar de afdeling geriatrische revalidatiezorg van een vvt-organisatie.
+- Een cliënt/patiënt wordt overgedragen van een intramurale vvt-organisatie naar een regionaal wijkzorgteam van een landelijke wijkzorgorganisatie.
+- Een cliënt/patiënt wordt overgedragen van een vvt-organisatie naar het specialisme orthopedie van een ziekenhuis.
 
 ### Principes
 
