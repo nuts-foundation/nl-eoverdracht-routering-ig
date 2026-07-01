@@ -29,12 +29,12 @@ Some example FHIR queries that can be used:
 
 | Description | Query | Common use |
 |-------------|-------|------------|
-| Find an Organization by did:nuts-identifier | /Organization?identifier=urn:ietf:rfc:3986|{did:nuts-identifier including did:nuts-prefix} | Part of nursing handoff flow at Sending Organization |
+| Look up an Organization by did:nuts-identifier | /Organization?identifier=urn:ietf:rfc:3986\|{did:nuts-identifier including did:nuts-prefix} | Part of nursing handoff flow at Sending Organization, Receiving Organization looks up own Organization-resource |
 | Find all Locations of an organization | /Location?organization=Organization/{organization-resource-id} | Part of nursing handoff flow at Sending Organization |
 | Find all HealthcareServices of an organization | /HealthcareService?organization=Organization/{organization-resource-id} | Part of nursing handoff flow at Sending Organization |
-| Find all HealthcareServices of a specific type within an organization | /HealthcareService?organization=Organization/{organization-resource-id}&service-type=http://istandaarden.nl/ibieb/codelijsten/COD163|{code} |
-| Lookup Location | /Location?identifier=urn:ietf:rfc:3986|{custodianAssignedIdentifier found in fetched Task} | Receiving Organization looks up the Location using the identifier that is mentioned in Task.location |
-| Lookup HealthcareService | /HealthcareService?identifier=urn:ietf:rfc:3986|{custodianAssignedIdentifier found in fetched Task} | Receiving Organization looks up the HealthcareService using the identifier that is mentioned in Task.location |
+| Find all HealthcareServices of a specific 'zorgzwaarte' within an organization | /HealthcareService?organization=Organization/{organization-resource-id}&service-type=https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/estafette/2.4/codelijsten/cod163\|{zorgzwaarte-code} |
+| Lookup Location | /Location?identifier={identifier-system found in Task}\|{identifier-value found in Task} | Receiving Organization looks up the targeted Location using the identifier that is mentioned in Task.location |
+| Lookup HealthcareService | /HealthcareService?identifier={identifier-system found in Task}\|{identifier-value found in Task} | Receiving Organization looks up the targeted HealthcareService using the identifier that is mentioned in Task.healthcareservice |
 
 ### Routing
 
