@@ -33,12 +33,22 @@ while [ "$#" -gt 0 ]; do
 done
 
 echo "Checking internet connection"
-curl -sSf tx.fhir.org > /dev/null
-
-if [ $? -ne 0 ] ; then
-  echo "Offline (or the terminology server is down), unable to update.  Exiting"
-  exit 1
-fi
+max_attempts=5
+retry_delay=5
+attempt=1
+while true; do
+  curl -sSf tx.fhir.org > /dev/null
+  if [ $? -eq 0 ]; then
+    break
+  fi
+  if [ $attempt -ge $max_attempts ]; then
+    echo "Offline (or the terminology server is down) after $max_attempts attempts, unable to update.  Exiting"
+    exit 1
+  fi
+  echo "Connection check failed (attempt $attempt/$max_attempts), retrying in ${retry_delay}s..."
+  sleep $retry_delay
+  attempt=$((attempt + 1))
+done
 
 if [ ! -d "$input_cache_path" ] ; then
   if [ $FORCE != true ]; then
