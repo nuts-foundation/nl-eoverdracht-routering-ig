@@ -22,3 +22,13 @@ Teams, healthcare services and specialties have to be modeled as [HealthcareServ
 #### Other resources
 
 Regarding the generic function Addressing no other resources than Organization, Location and HealthcareService are in scope.
+
+### Routing
+
+#### Task
+
+Sending Organizations have to use the following eOverdracht-Task profile: https://github.com/user-attachments/files/26945931/eOverdracht-Task-STU3-profile.json
+
+Example: https://github.com/user-attachments/files/26945876/eOverdracht-Task-eov-test-1_1b-REQUESTED.xml
+
+TO DO: include profile and example in this FHIR IG instead of linking to external resources.
