@@ -32,7 +32,7 @@ Some example FHIR queries that can be used:
 | Look up an Organization by did:nuts-identifier | /Organization?identifier=urn:ietf:rfc:3986\|{did:nuts-identifier including did:nuts-prefix} | Part of nursing handoff flow at Sending Organization, Receiving Organization looks up own Organization-resource |
 | Find all Locations of an organization | /Location?organization=Organization/{organization-resource-id} | Part of nursing handoff flow at Sending Organization |
 | Find all HealthcareServices of an organization | /HealthcareService?organization=Organization/{organization-resource-id} | Part of nursing handoff flow at Sending Organization |
-| Find all HealthcareServices of a specific 'zorgzwaarte' within an organization | /HealthcareService?organization=Organization/{organization-resource-id}&service-type=https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/estafette/2.4/codelijsten/cod163\|{zorgzwaarte-code} |
+| Find all HealthcareServices of a specific 'zorgzwaarte' within an organization | /HealthcareService?organization=Organization/{organization-resource-id}&service-type=https://informatiemodel.istandaarden.nl/informatiemodel/iwlz/estafette/2.4/codelijsten/cod163\|{zorgzwaarte-code} | Part of nursing handoff flow at Sending Organization |
 | Lookup Location | /Location?identifier={identifier-system found in Task}\|{identifier-value found in Task} | Receiving Organization looks up the targeted Location using the identifier that is mentioned in Task.location |
 | Lookup HealthcareService | /HealthcareService?identifier={identifier-system found in Task}\|{identifier-value found in Task} | Receiving Organization looks up the targeted HealthcareService using the identifier that is mentioned in Task.healthcareservice |
 
